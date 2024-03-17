@@ -1,0 +1,26 @@
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  box-shadow: 0 1px 3px -2px #000;
+  margin-bottom: 1px;
+  background: white;
+}
+.admin-nav-logo {
+  width: 200px;
+}
+.admin-nav-profile {
+  width: 75px;
+}
+@media (max-width: 800px) {
+  .admin-navbar {
+    padding: 15px 30px;
+  }
+  .admin-nav-logo {
+    width: 150px;
+  }
+  .admin-nav-profile {
+    width: 60px;
+  }
+}
+@media(max-width: 500px) {}

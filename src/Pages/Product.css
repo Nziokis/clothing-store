@@ -1,0 +1,18 @@
+.loading-icon {
+  color: teal;
+  font-size: 2rem;
+  animation: animate 2s infinite;
+}
+.center-spinner {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
