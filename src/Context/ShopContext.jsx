@@ -16,16 +16,19 @@ const ShopContextProvider = (props) => {
 
   const addToCart = async (itemId) => {
     try {
-      const response = await fetch("http://localhost:4000/api/addtocart", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          productId: itemId,
-          quantity: 1, // You can adjust the quantity as needed
-        }),
-      });
+      const response = await fetch(
+        "https://clothing-backend-zdrq.onrender.com/api/addtocart",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            productId: itemId,
+            quantity: 1, // You can adjust the quantity as needed
+          }),
+        }
+      );
       const data = await response.json();
       if (data.success) {
         console.log("Item added to cart successfully");
@@ -42,7 +45,7 @@ const ShopContextProvider = (props) => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/allproducts")
+    fetch("https://clothing-backend-zdrq.onrender.com/api/allproducts")
       .then((res) => res.json())
       .then((data) => setAll_products(data));
   }, []);

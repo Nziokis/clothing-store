@@ -11,7 +11,9 @@ const CartItems = (props) => {
   async function getMatchingItems(cartItems) {
     const matchingItems = [];
     try {
-      const response = await fetch(`http://localhost:4000/api/newcollections`);
+      const response = await fetch(
+        `https://clothing-backend-zdrq.onrender.com/api/newcollections`
+      );
       const newCollections = await response.json();
       for (const item of cartItems) {
         const matchingItem = newCollections.find(

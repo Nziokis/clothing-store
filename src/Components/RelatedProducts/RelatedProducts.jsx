@@ -5,7 +5,7 @@ import Item from "../Item/Item";
 const RelatedProducts = () => {
   const [allproducts, setAllProducts] = useState([]);
   const fetchInfo = async () => {
-    await fetch("http://localhost:4000/api/allproducts")
+    await fetch("https://clothing-backend-zdrq.onrender.com/api/allproducts")
       .then((res) => res.json())
       .then((data) => {
         const subsetOfData = data.slice(0, 4);

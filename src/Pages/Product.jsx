@@ -19,7 +19,7 @@ const Product = () => {
       try {
         // Replace this URL with your actual API endpoint
         const response = await fetch(
-          `http://localhost:4000/api/product/${productId}`
+          `https://clothing-backend-zdrq.onrender.com/api/product/${productId}`
         );
         const data = await response.json();
         setProduct(data); // Set the product data in the state

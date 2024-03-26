@@ -6,7 +6,7 @@ import Item from "../Item/Item";
 const NewCollections = () => {
   const [new_collection, setNew_collection] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/api/newcollections")
+    fetch("https://clothing-backend-zdrq.onrender.com/api/newcollections")
       .then((res) => res.json())
       .then((data) => setNew_collection(data));
   }, []);

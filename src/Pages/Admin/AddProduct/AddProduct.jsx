@@ -79,13 +79,16 @@ const AddProduct = () => {
     if (productDetails.image) {
       console.log(productDetails);
       try {
-        const response = await fetch("http://localhost:4000/api/addproduct", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(productDetails),
-        });
+        const response = await fetch(
+          "https://clothing-backend-zdrq.onrender.com/api/addproduct",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(productDetails),
+          }
+        );
 
         const data = await response.json();
         if (data.success) {
