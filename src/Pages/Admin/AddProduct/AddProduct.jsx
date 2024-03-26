@@ -184,15 +184,15 @@ const AddProduct = () => {
               hidden
             />
           </div>
-          <button
-            onClick={() => {
-              Add_Product();
-            }}
-            className="addproduct-btn"
-          >
-            ADD
-          </button>
         </div>
+        <button
+          onClick={() => {
+            Add_Product();
+          }}
+          className="addproduct-btn"
+        >
+          ADD
+        </button>
       </div>
     </>
   );
